@@ -13,7 +13,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 // Clone the source code from the Git repository
-                git url: 'https://github.com/OESONDEVOPS/Zakiya.git/', branch: 'master' 
+                git url: 'https://github.com/zakiyafebin/my-project.git', branch: 'main' 
             }
         }
 

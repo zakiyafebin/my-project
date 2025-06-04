@@ -25,8 +25,8 @@ pipeline {
                 }
             }
     }
-}
-    post {
+
+     post {
         always {
             echo 'This will always run after the stages.'
         }
@@ -37,3 +37,5 @@ pipeline {
             echo 'This will run only if the pipeline fails.'
         }
     }
+}
+   

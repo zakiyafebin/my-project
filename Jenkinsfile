@@ -24,13 +24,14 @@ pipeline {
                     sh 'pwd'          // Print current working directory
                 }
             }
-    }
-    stage('Test Docker Access') {
+            stage('Test Docker Access') {
             steps {
                 // Verify that the Jenkins agent has the docker command available
                 sh 'docker --version'
             }
         }
+    }
+    
 
      post {
         always {

@@ -25,6 +25,12 @@ pipeline {
                 }
             }
     }
+    stage('Test Docker Access') {
+            steps {
+                // Verify that the Jenkins agent has the docker command available
+                sh 'docker --version'
+            }
+        }
 
      post {
         always {

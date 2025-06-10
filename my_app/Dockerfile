@@ -10,8 +10,9 @@ RUN ls -l
 COPY index.html  /usr/share/nginx/html
 
 
+RUN ls /usr/share/nginx/html
 COPY resources /usr/share/nginx/html/resources
-
+RUN ls /usr/share/nginx/html/resources
 # Debugging: Show what's in the Nginx web root after copying
 
 

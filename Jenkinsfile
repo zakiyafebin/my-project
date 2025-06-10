@@ -37,7 +37,7 @@ pipeline {
                 echo 'INSIDE DOCKER BUILD'
                 sh 'pwd'
                 sh 'ls /var/jenkins_home/workspace/'
-                sh 'docker build -t cars-app -f /var/jenkins_home/workspace/first-pipeline/my_app/Dockerfile .'
+                sh 'docker build -t cars-app my-app -f /var/jenkins_home/workspace/first-pipeline/my_app/Dockerfile .'
             }
         }
          stage('Save Docker Image') {

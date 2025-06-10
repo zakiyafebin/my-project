@@ -36,6 +36,7 @@ pipeline {
                 // CORRECTED PATH based on the provided directory structure
                 echo 'INSIDE DOCKER BUILD'
                 sh 'pwd'
+                sh 'ls /var/jenkins_home/workspace/'
                 sh 'docker build -t cars-app -f /var/jenkins_home/workspace/first-pipeline/ .'
             }
         }

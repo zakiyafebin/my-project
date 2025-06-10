@@ -34,7 +34,9 @@ pipeline {
                 // Build the Docker image using the Dockerfile in the 'Docker' directory
                 // -t tags the image, -f specifies the Dockerfile path, . is the build context
                 // CORRECTED PATH based on the provided directory structure
-                sh 'docker build -t cars-app -f /mnt/c/Zakiya/Oeson/Local-Zak/my-proj/my_app/Dockerfile .'
+                echo 'INSIDE DOCKER BUILD'
+                sh 'pwd'
+                sh 'docker build -t cars-app -f /var/jenkins_home/workspace/first-pipeline/ .'
             }
         }
          stage('Save Docker Image') {

@@ -11,7 +11,7 @@ COPY my_app/index.html  /usr/share/nginx/html
 
 
 
-COPY my_appresources /usr/share/nginx/html/resources
+COPY my_app/resources /usr/share/nginx/html/resources
 
 
 

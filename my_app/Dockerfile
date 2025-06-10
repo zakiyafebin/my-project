@@ -7,13 +7,12 @@ RUN ls -l
 # Copy your web application files into the Nginx default HTML directory
 # The '.' refers to the current directory where the Dockerfile is located (your my-webapp folder)
 # /usr/share/nginx/html is the default directory Nginx serves files from
-COPY index.html  /usr/share/nginx/html
+COPY my_app/index.html  /usr/share/nginx/html
 
 
-RUN ls /usr/share/nginx/html
-COPY resources /usr/share/nginx/html/resources
-RUN ls /usr/share/nginx/html/resources
-# Debugging: Show what's in the Nginx web root after copying
+
+COPY my_appresources /usr/share/nginx/html/resources
+
 
 
 # Expose port 80, which is the default port Nginx listens on

@@ -9,7 +9,7 @@ RUN ls -l
 # /usr/share/nginx/html is the default directory Nginx serves files from
 COPY index.html  /usr/share/nginx/html
 
-COPY index.html  /usr/share/nginx/html/resources
+COPY resources /usr/share/nginx/html/resources
 
 # Debugging: Show what's in the Nginx web root after copying
 

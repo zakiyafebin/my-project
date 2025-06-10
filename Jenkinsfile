@@ -34,7 +34,7 @@ pipeline {
                 // Build the Docker image using the Dockerfile in the 'Docker' directory
                 // -t tags the image, -f specifies the Dockerfile path, . is the build context
                 // CORRECTED PATH based on the provided directory structure
-                sh 'docker build -t cars-app -f C:/Zakiya/Oeson/Local-Zak/my-proj/my_app/Dockerfile .'
+                sh 'docker build -t cars-app -f /mnt/c/Zakiya/Oeson/Local-Zak/my-proj/my_app/Dockerfile .'
             }
         }
          stage('Save Docker Image') {

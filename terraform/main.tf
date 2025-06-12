@@ -1,8 +1,5 @@
 provider "aws" {
   region = "ap-southeast-2"
-  access_key = "AKIAUJ3VUMUIT4XJDMUD"
-  secret_key = "8YhxLDNut+3/ggVrlQeazjZaJuPhtFRPSP+N/mlc"
-
 }
 
 # Upload your public SSH key to AWS

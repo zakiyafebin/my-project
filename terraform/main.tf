@@ -12,7 +12,7 @@ resource "aws_key_pair" "keypair1" {
 resource "aws_security_group" "allow_ssh_http" {
   name        = "allow_ssh_http"
   description = "Allow SSH and HTTP"
-"
+
   ingress {
     from_port   = 22
     to_port     = 22

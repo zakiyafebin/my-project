@@ -5,7 +5,7 @@ provider "aws" {
 # Upload your public SSH key to AWS
 resource "aws_key_pair" "keypair1" {
   key_name   = "keypair1"
-  public_key = file("/MyKeyPair.pub")  # must be a .pub file
+  public_key = file("../MyKeyPair.pub")  # must be a .pub file
 }
 
 # Security group to allow SSH and HTTP

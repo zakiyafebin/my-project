@@ -96,3 +96,31 @@ sleep 2
 docker-compose down
 
 ```# my-project
+```
+
+# Jenkins Basics
+> Jenkins is an open-source automation server used primarily for continuous integration and continuous delivery (CI/CD). It helps automate tasks related to building, testing, and deploying software.
+## Core Concepts
+> - Jenkins Controller (Formerly Master) : The Jenkins architecture supports distributed builds. One Jenkins node functions as the organizer, called a Jenkins Controller. 
+> - Jenkins Agent (Formerly Slave) : The Jenkins Agent connects to the Jenkins Controller to run build jobs. 
+> - Jenkins Node : A Jenkins node is an umbrella term for Agents and Controllers, regardless of their actual roles.
+> - Jenkins Project (Formerly Job) : A Jenkins project or task is an automated process created by a Jenkins user.  
+> - Jenkins Plugins : Plugins are community-developed modules you can install on a Jenkins server. 
+> - Jenkins Pipeline : A Jenkins Pipeline is a user-created pipeline model. The pipeline includes a variety of plugins that help you define step-by-step actions in your software pipeline. This includes:
+>> -  Automated builds.
+>> -  Multi-step testing.
+>> - Deployment procedures.
+>> - Security scanning
+
+> ### Install Jenkins
+> ### Create admin user
+> ### Install plugins
+
+> ### configure Jenkins
+> ### Create a simple pipeline
+>> - Configure pipeline
+>> - Integrated  git
+>> - Integrated docker from jenkins
+>> - Refer the Jenkinsfile groovy script
+>> - Added credentials for git and docker in jenkins global credentials
+>> - docker compose up

@@ -48,9 +48,17 @@ pipeline {
             }
         }
     }
-    
 
-     post {
+    stage('Terraform Init & Apply') {
+      steps {
+        dir('terraform-jenkins-project') {
+          sh 'terraform init'
+          sh 'terraform apply -auto-approve'
+        }
+      }
+    }
+
+    post {
         always {
             echo 'This will always run after the stages.'
         }

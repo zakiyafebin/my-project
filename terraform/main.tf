@@ -5,14 +5,14 @@ provider "aws" {
 # Upload your public SSH key to AWS
 resource "aws_key_pair" "keypair1" {
   key_name   = "keypair1"
-  public_key = file("C:/Zakiya/Oeson/Local-Zak/my-proj/MyKeyPair.pub")  # must be a .pub file
+  public_key = file("/MyKeyPair.pub")  # must be a .pub file
 }
 
 # Security group to allow SSH and HTTP
 resource "aws_security_group" "allow_ssh_http" {
   name        = "allow_ssh_http"
   description = "Allow SSH and HTTP"
-
+"
   ingress {
     from_port   = 22
     to_port     = 22

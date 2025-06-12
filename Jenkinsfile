@@ -1,4 +1,9 @@
 pipeline {
+
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID') // Use the credentials ID you set in Jenkins
+        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY') // Use the credentials ID you set in Jenkins
+    }
     agent any
     tools {
         terraform 'terraform1' // Use the exact Name you configured above

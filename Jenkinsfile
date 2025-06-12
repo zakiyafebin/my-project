@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        terraform 'terraform1' // Use the exact Name you configured above
+    }
 
     stages {
         stage('Hello') {

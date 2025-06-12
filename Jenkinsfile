@@ -47,16 +47,17 @@ pipeline {
                 sh 'docker save cars-app -o cars-app.tar'
             }
         }
-    }
-
-    stage('Terraform Init & Apply') {
-      steps {
-        dir('terraform-jenkins-project') {
-          sh 'terraform init'
-          sh 'terraform apply -auto-approve'
+        stage('Terraform Init & Apply') {
+            steps {
+                dir('terraform-jenkins-project') {
+                sh 'terraform init'
+                sh 'terraform apply -auto-approve'
+                }
+            }
         }
-      }
-    }
+}
+
+    
 
     post {
         always {

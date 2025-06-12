@@ -52,7 +52,7 @@ pipeline {
         }
         stage('Terraform Init & Apply') {
             steps {
-                dir('terraform-jenkins-project') {
+                dir('terraform') {
                 sh 'terraform init'
                 sh 'terraform apply -auto-approve'
                 }

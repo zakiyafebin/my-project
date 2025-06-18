@@ -52,7 +52,7 @@ resource "aws_instance" "ec2_ansible1" {
   
 
   tags = {
-    Name = "ec2-created-from-terraform for ansible 1"
+    Name = "ec2_ansible1"
   }
 }
 resource "aws_instance" "ec2_ansible2" {
@@ -64,10 +64,10 @@ resource "aws_instance" "ec2_ansible2" {
   
 
   tags = {
-    Name = "ec2-created-from-terraform 2"
+    Name = "ec2_ansible2"
   }
 }
-resource "aws_instance" "mec2_ansible3" {
+resource "aws_instance" "ec2_ansible3" {
   ami                    = "ami-00543daa0ad4d3ea4"
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.keypair1.key_name
@@ -76,7 +76,7 @@ resource "aws_instance" "mec2_ansible3" {
   
 
   tags = {
-    Name = "ec2-created-from-terraform 3"
+    Name = "ec2_ansible3"
   }
 }
 resource "aws_instance" "ec2_ansible4" {
@@ -88,6 +88,6 @@ resource "aws_instance" "ec2_ansible4" {
   
 
   tags = {
-    Name = "ec2-created-from-terraform 4"
+    Name = "ec2_ansible4"
   }
 }

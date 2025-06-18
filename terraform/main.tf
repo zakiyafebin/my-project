@@ -43,7 +43,7 @@ resource "aws_security_group" "allow_ssh_http" {
 }
 
 # EC2 instance that uses the key and security group
-resource "aws_instance" "myec2" {
+resource "aws_instance" "ec2_ansible1" {
   ami                    = "ami-00543daa0ad4d3ea4"
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.keypair1.key_name
@@ -52,6 +52,42 @@ resource "aws_instance" "myec2" {
   
 
   tags = {
-    Name = "ec2-created-from-terraform"
+    Name = "ec2-created-from-terraform for ansible 1"
+  }
+}
+resource "aws_instance" "ec2_ansible2" {
+  ami                    = "ami-00543daa0ad4d3ea4"
+  instance_type          = "t2.micro"
+  key_name               = aws_key_pair.keypair1.key_name
+  security_groups        = [aws_security_group.allow_ssh_http.name]
+
+  
+
+  tags = {
+    Name = "ec2-created-from-terraform 2"
+  }
+}
+resource "aws_instance" "mec2_ansible3" {
+  ami                    = "ami-00543daa0ad4d3ea4"
+  instance_type          = "t2.micro"
+  key_name               = aws_key_pair.keypair1.key_name
+  security_groups        = [aws_security_group.allow_ssh_http.name]
+
+  
+
+  tags = {
+    Name = "ec2-created-from-terraform 3"
+  }
+}
+resource "aws_instance" "ec2_ansible4" {
+  ami                    = "ami-00543daa0ad4d3ea4"
+  instance_type          = "t2.micro"
+  key_name               = aws_key_pair.keypair1.key_name
+  security_groups        = [aws_security_group.allow_ssh_http.name]
+
+  
+
+  tags = {
+    Name = "ec2-created-from-terraform 4"
   }
 }
